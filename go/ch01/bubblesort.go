@@ -12,9 +12,7 @@ func BubbleSort(arr []int) []int {
 		for k := n - 2; k >= i; k-- {
 			// 交换两个逆序元素
 			if sorted[k+1] < sorted[k] {
-				t := sorted[k+1]
-				sorted[k+1] = sorted[k]
-				sorted[k] = t
+				sorted[k+1], sorted[k] = sorted[k], sorted[k+1]
 			}
 		}
 	}
