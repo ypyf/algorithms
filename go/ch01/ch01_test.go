@@ -20,6 +20,14 @@ func TestNextSubset(t *testing.T) {
 	t.Log(subset)
 }
 
+func TestSelectionSort(t *testing.T) {
+	expected := []int{-24, 0, 3, 4, 6, 17, 24, 24, 321, 325}
+	r := SelectionSort([]int{3, 321, 6, -24, 325, 24, 24, 17, 4, 0})
+	if !reflect.DeepEqual(r, expected) {
+		t.Errorf("SelectionSort was incorrect: got %v, expected %v\n", r, expected)
+	}
+}
+
 func TestBubbleSort(t *testing.T) {
 	expected := []int{-24, 0, 3, 4, 6, 17, 24, 24, 321, 325}
 	r := BubbleSort([]int{3, 321, 6, -24, 325, 24, 24, 17, 4, 0})
