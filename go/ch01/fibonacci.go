@@ -14,3 +14,16 @@ func Fibonacci(n uint) int {
 	}
 	return b
 }
+
+// 返回一个返回 int 的函数。
+func Fibonacci2() func() int {
+	a := 0
+	b := 1
+	f := func() int {
+		r := a + b
+		a = b
+		b = r
+		return a
+	}
+	return f
+}

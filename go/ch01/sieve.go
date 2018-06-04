@@ -18,10 +18,10 @@ func sieve(n int) []int {
 		arr = append(arr, i)
 	}
 
-	// 假定小于p*p的p的倍数都已经被筛去了
 	// 也可以使用条件 p <= sqrt(n)
 	for p*p <= n {
 		// 筛去p的倍数
+		// 假定小于p*p的p的倍数都已经被筛去了
 		if arr[p-2] != 0 {
 			j := p * p
 			for j <= n {
